@@ -1,0 +1,88 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-image: url('background.jpg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Ensures no scrolling */
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.75); /* Adjust transparency for better readability */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    cursor: pointer; /* Changes the cursor to a pointer when over the container */
+}
+
+h1 {
+    font-size: 2rem; /* Responsive font size */
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+}
+
+textarea, button {
+    width: calc(100% - 24px); /* Adjust width taking padding into account */
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+
+textarea {
+    height: 150px; /* Fixed height */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+button:active {
+    transform: scale(0.95); /* Slightly shrink button on active (click) */
+}
+
+.result {
+    font-size: 1.2rem;
+    color: #FFD700; /* Gold color for results */
+    margin-top: 20px;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    textarea, button {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
